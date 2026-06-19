@@ -120,8 +120,8 @@ export function KPICards() {
               <CardContent className="relative z-10">
                 <div className="flex items-baseline space-x-2">
                   <span className="text-3xl font-bold text-foreground">
-                    {kpi.title === 'Saving Opportunity' ? 
-                      (kpi.data.value / 1000000).toFixed(1) + ' Jt' : 
+                    {kpi.title === 'Efisiensi Biaya' || kpi.title === 'Saving Opportunity' ? 
+                      (parseFloat(kpi.data.value.toString().replace(/,/g, '').replace(/\./g, '')) / 1000000).toFixed(1) + ' Jt' : 
                       kpi.data.value}
                   </span>
                   <span className="text-sm font-medium text-muted-foreground">{kpi.data.unit}</span>
