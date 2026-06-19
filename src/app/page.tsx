@@ -73,7 +73,7 @@ export default function PortalPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-start md:justify-center p-6 py-12 md:py-6 relative overflow-x-hidden">
+    <div className="w-full h-screen flex flex-col items-center justify-start md:justify-center p-6 py-12 md:py-6 relative overflow-x-hidden overflow-y-auto">
       {/* Theme Toggle at Top Right */}
       <div className="absolute top-6 right-6 z-50">
         <ThemeToggle />
