@@ -5,8 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowDownIcon, ArrowUpIcon, Zap, Droplet, Recycle, Cloud, Wallet, Activity } from 'lucide-react';
 import { MOCK_KPI } from '@/lib/mock-data';
 
-import { motion } from 'framer-motion';
-
+import { motion, Variants } from 'framer-motion';
 import { useSearchParams } from 'next/navigation';
 
 export function KPICards() {
@@ -74,7 +73,7 @@ export function KPICards() {
     },
   ];
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -84,7 +83,7 @@ export function KPICards() {
     }
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
   };
