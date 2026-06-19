@@ -29,8 +29,7 @@ export function AlertPanel() {
         <div className="divide-y divide-border/50">
           {MOCK_ALERTS.map((alert) => (
             <Dialog key={alert.id}>
-              <DialogTrigger asChild>
-                <div className="p-4 hover:bg-muted/50 transition-colors cursor-pointer group">
+              <DialogTrigger render={<div className="p-4 hover:bg-muted/50 transition-colors cursor-pointer group" />}>
                   <div className="flex items-start justify-between mb-1">
                     <div className="flex items-center space-x-2">
                       {alert.severity === 'high' ? (
@@ -60,7 +59,6 @@ export function AlertPanel() {
                       AI Resolve <ChevronRight className="w-3 h-3 ml-1" />
                     </span>
                   </div>
-                </div>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md bg-card/95 backdrop-blur-xl border-white/10 shadow-2xl">
                 <DialogHeader>
@@ -100,13 +98,11 @@ export function AlertPanel() {
                   </div>
                 </div>
                 <DialogFooter className="sm:justify-end">
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="mr-2">Dismiss</Button>
+                  <DialogTrigger render={<Button variant="outline" className="mr-2" />}>
+                    Dismiss
                   </DialogTrigger>
-                  <DialogTrigger asChild>
-                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                      <Zap className="w-4 h-4 mr-2" /> Execute Fix
-                    </Button>
+                  <DialogTrigger render={<Button className="bg-primary text-primary-foreground hover:bg-primary/90" />}>
+                    <Zap className="w-4 h-4 mr-2" /> Execute Fix
                   </DialogTrigger>
                 </DialogFooter>
               </DialogContent>
